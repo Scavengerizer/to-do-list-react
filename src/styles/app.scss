@@ -1,0 +1,13 @@
+// importing partials
+
+@import "./variables";
+@import "./utilities";
+@import "./classes";
+
+// importing sass components
+
+@import "./components/ToDo.scss";
+
+body {
+  background-color: $cream;
+}
