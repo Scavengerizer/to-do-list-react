@@ -1,24 +1,22 @@
-import React from 'react';
+import React from "react";
+import Todo from "./Todo";
 
-function ToDo(){
-  return(
-    <header>
-      <div className="row center">
-        <div className="logo">
-          <h1><span>H</span>OME <span>D</span>ECOR</h1>
-        </div>
-        <nav>
-          <ul className="nav-links row center">
-            <li><a href="#" className='link'>HOME</a></li>
-            <li><a href="#" className='link'>ABOUT</a></li>
-            <li><a href="#" className='link'>WORK</a></li>
-            <li><a href="#" className='link contact'>CONTACT US</a></li>
-          </ul>
-        </nav>
-      </div>
-
-    </header>
-  )
+function ToDo({ input, setInput, todos, setTodos }) {
+  return (
+    <div className='todo-container'>
+      <ul className='todo-list'>
+        {todos.map((todo) => (
+          <Todo text={todo.text} key={todo.id} />
+        ))}
+        {/* <Todo
+          input={input}
+          todos={todos}
+          setTodos={setTodos}
+          setInput={setInput}
+        /> */}
+      </ul>
+    </div>
+  );
 }
 
 export default ToDo;
