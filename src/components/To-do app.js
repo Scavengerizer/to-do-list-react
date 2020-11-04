@@ -6,7 +6,13 @@ function ToDo({ input, setInput, todos, setTodos }) {
     <div className='todo-container'>
       <ul className='todo-list'>
         {todos.map((todo) => (
-          <Todo text={todo.text} key={todo.id} />
+          <Todo
+            text={todo.text}
+            key={todo.id}
+            todo={todo}
+            todos={todos}
+            setTodos={setTodos}
+          />
         ))}
         {/* <Todo
           input={input}

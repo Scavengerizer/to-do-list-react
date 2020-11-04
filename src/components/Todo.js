@@ -1,14 +1,18 @@
 import React from "react";
 
-export default function Todo({ text, input, setInput, todos, setTodos }) {
+export default function Todo({ todo, text, input, setInput, todos, setTodos }) {
+  function deleteHandler() {
+    setTodos(todos.filter((el) => el.id !== todo.id));
+    // console.log(todo);
+  }
   return (
     <div className='todo'>
       <div className='row'>
-        <h3>{text}</h3>
+        <input value={text} type='text' />
         <button>
           <i className='fa fa-check'></i>
         </button>
-        <button>
+        <button onClick={deleteHandler}>
           <i className='fa fa-trash'></i>
         </button>
       </div>
