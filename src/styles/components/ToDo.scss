@@ -50,9 +50,23 @@
       font-family: $Mont;
     }
     canvas {
+      position: relative;
       border: 1px solid #181818;
       margin: 1em 0;
     }
+    .canvas-btns {
+      display: flex;
+      flex-direction: row;
+    }
+    // .canvaslock {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   z-index: 20;
+    //   background-color: black;
+    // }
     button {
       background-color: $grey;
       border: none;
@@ -63,6 +77,9 @@
       cursor: pointer;
       .fa-check {
         color: green;
+      }
+      .fa-repeat {
+        color: blueviolet;
       }
     }
     button:hover {

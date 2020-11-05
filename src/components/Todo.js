@@ -40,15 +40,16 @@ export default function Todo({
 
   const canvasRef = useRef(null);
   const resetRef = useRef(null);
+  // const saveRef = useRef(null);
 
   // console.log(todo);
   useEffect(() => {
     let painting = false;
     const canvas = canvasRef.current;
     const resetbutton = resetRef.current;
+    // const savebutton = saveRef.current;
     canvas.id = todo.id;
     // console.log(canvas);
-    setCanvasID([...canvasID, { id: canvas.id }]);
     const ctx = canvas.getContext("2d");
     canvas.height = window.innerHeight / 10;
     canvas.width = window.innerWidth / 10;
@@ -79,6 +80,11 @@ export default function Todo({
     resetbutton.addEventListener("click", () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     });
+    // savebutton.addEventListener("click", () => {
+    //   ctx.save();
+    //   // setCanvasID((canvasID) => !canvasID);
+    //   // console.log(canvasID);
+    // });
   }, []);
 
   return (
@@ -93,10 +99,16 @@ export default function Todo({
       </div>
       <div className='canvas-element col center'>
         <h5>Add your signature here</h5>
+
         <canvas ref={canvasRef}></canvas>
-        <button className='check' ref={resetRef}>
-          <i className='fa fa-check fa-sm'></i>
-        </button>
+        <div className='canvas-btns'>
+          {/* <button className='check' ref={saveRef}>
+            <i className='fa fa-check fa-sm'></i>
+          </button> */}
+          <button className='repeat' ref={resetRef}>
+            <i className='fa fa-repeat' aria-hidden='true'></i>
+          </button>
+        </div>
       </div>
     </div>
   );
