@@ -7,7 +7,7 @@ import "./styles/app.scss";
 function App() {
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
-  const [canvasID, setCanvasID] = useState(true);
+  const [canvasID, setCanvasID] = useState("");
 
   return (
     <div className='App'>

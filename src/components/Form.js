@@ -7,6 +7,11 @@ export default function Form({ input, setInput, todos, setTodos }) {
   }
   function submitHandler(e) {
     e.preventDefault();
+    if (input == "") {
+      alert("Task is empty");
+      return;
+    }
+
     setTodos([...todos, { text: input, id: Math.random() * 1000 }]);
     setInput("");
   }

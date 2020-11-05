@@ -1,9 +1,12 @@
 .todo {
+  margin-top: 5em;
+  margin-bottom: 2em;
   .todo-item {
-    margin: 1em 0;
+    margin-bottom: 5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     h3,
     button {
       display: inline-block;
@@ -12,6 +15,8 @@
       background-color: $grey;
       border: none;
       padding: 0.75em;
+      border-radius: 10px;
+
       margin: 0 0.5em;
       transition-duration: 0.3s;
       transition: all ease linear;
@@ -42,13 +47,7 @@
   }
   .canvas-element {
     margin-top: 2em;
-    h5 {
-      text-align: center;
-      font-size: 1rem;
-      color: #181818;
-      font-weight: 300;
-      font-family: $Mont;
-    }
+
     canvas {
       position: relative;
       border: 1px solid #181818;
@@ -58,6 +57,7 @@
       display: flex;
       flex-direction: row;
     }
+
     // .canvaslock {
     //   position: absolute;
     //   top: 0;
@@ -71,6 +71,8 @@
       background-color: $grey;
       border: none;
       padding: 0.75em;
+      border-radius: 10px;
+
       margin: 0 0.5em;
       transition-duration: 0.3s;
       transition: all ease linear;
@@ -79,13 +81,8 @@
         color: green;
       }
       .fa-repeat {
-        color: blueviolet;
+        color: #80ffdb;
       }
-    }
-    button:hover {
-      opacity: 0.8;
-      transition-duration: 0.3s;
-      transition: all ease linear;
     }
   }
 }
@@ -93,4 +90,53 @@
   width: 90%;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.canvas_and_date {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  .time-input {
+    padding-left: 5em;
+    margin-top: 2em;
+    input {
+      padding: 1em;
+      width: 13rem;
+      padding: 12px;
+      border: 1px solid #181818;
+      border-radius: 5px;
+      box-sizing: border-box;
+      resize: vertical;
+      color: #181818;
+      font-family: $Josh;
+      letter-spacing: 1px;
+      margin: 3em 0;
+    }
+    button {
+      background-color: $grey;
+      border: none;
+      padding: 1em;
+      border-radius: 10px;
+      transition-duration: 0.3s;
+      transition: all ease linear;
+      cursor: pointer;
+      color: white;
+      font-family: $Mont;
+    }
+  }
+  .canvas-element {
+    padding-right: 5em;
+  }
+}
+h5 {
+  text-align: center;
+  font-size: 1rem;
+  color: #181818;
+  font-weight: 300;
+  font-family: $Mont;
+}
+button:hover {
+  opacity: 0.8;
+  transition-duration: 0.3s;
+  transition: all ease linear;
 }
