@@ -48,3 +48,15 @@
     }
   }
 }
+.notification-red {
+  background-color: #f94144;
+  border-left: 8px solid darken(#f94144, 15%);
+  font-family: $Mont;
+  letter-spacing: 1px;
+}
+.notification-green {
+  background-color: #43aa8b;
+  border-left: 8px solid darken(#43aa8b, 15%);
+  font-family: $Mont;
+  letter-spacing: 1px;
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-// import ReactNotification from "react-notifications-component";
-// import "react-notifications-component/dist/theme.css";
-// import { store } from "react-notifications-component";
+import ReactNotification from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
+import { store } from "react-notifications-component";
 import useSound from "use-sound";
 import alarm from "../alarm.mp3";
 
@@ -18,11 +18,11 @@ export default function Todo({
   // let canvas = document.querySelector("#canvas");
   // const ctx = canvas.getContext("2d");
 
-  // const greenNotif = ()=>{
+  // const purpleNotif = () => {
   //   store.addNotification({
-  //     title: "Wonderful!",
-  //     message: "teodosii@react-notifications-component",
-  //     type: "success",
+  //     title: "Task Reminder",
+  //     message: "Your alarm has been set off",
+  //     type: "awesome",
   //     insert: "top",
   //     container: "top-right",
   //     animationIn: ["animate__animated", "animate__fadeIn"],
@@ -32,7 +32,22 @@ export default function Todo({
   //       onScreen: true,
   //     },
   //   });
-  // }
+  // };
+  // const deleteNotif = () => {
+  //   store.addNotification({
+  //     title: "Task Deleted",
+  //     message: "Your task has been deleted successfully",
+  //     type: "delete",
+  //     insert: "top",
+  //     container: "top-right",
+  //     animationIn: ["animate__animated", "animate__fadeIn"],
+  //     animationOut: ["animate__animated", "animate__fadeOut"],
+  //     dismiss: {
+  //       duration: 5000,
+  //       onScreen: true,
+  //     },
+  //   });
+  // };
 
   //Resizing
   const [alarmSound] = useSound(alarm);
@@ -41,6 +56,7 @@ export default function Todo({
 
   function deleteHandler() {
     setTodos(todos.filter((el) => el.id !== todo.id));
+
     // console.log(todo);
   }
   function getDate(e) {
@@ -64,6 +80,8 @@ export default function Todo({
     setTimeout(initAlarm, diff);
   }
   function initAlarm() {
+    // const btn = document.querySelector("#alarm-btn");
+    // btn.innerHTML = "Stop Alarm";
     alarmSound();
   }
 
@@ -159,9 +177,12 @@ export default function Todo({
 
   return (
     <div className='todo col center'>
-      {/* <ReactNotification /> */}
       <div className='todo-item todo-container'>
-        <h3>{text}</h3>
+        <div className='task-texts col'>
+          <h6>Task Name</h6>
+          <h3>{text}</h3>
+        </div>
+
         <div className='todo-buttons'>
           <button className='trash' onClick={deleteHandler}>
             <i className='fa fa-trash fa-sm'></i>
@@ -187,11 +208,12 @@ export default function Todo({
             onChange={getDate}
             placeholder='yyyy-mm-ddThh:mm'
           />
-          <button type='submit' onClick={setDate}>
+          <button type='submit' id='alarm-btn' onClick={setDate}>
             Set Alarm
           </button>
         </div>
       </div>
+      <div className='line'></div>
     </div>
   );
 }
