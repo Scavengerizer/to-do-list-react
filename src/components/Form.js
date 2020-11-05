@@ -37,7 +37,6 @@ export default function Form({ input, setInput, todos, setTodos }) {
 
   function inputHandler(e) {
     setInput(e.target.value);
-    // console.log(e.target.value);
   }
   function submitHandler(e) {
     e.preventDefault();
