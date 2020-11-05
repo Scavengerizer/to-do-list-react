@@ -6,8 +6,8 @@
 
 // importing sass components
 
-@import "./components/todo.scss";
-@import "./components/form.scss";
+@import "../styles/components/form.scss";
+@import "../styles/components/todo.scss";
 
 body {
   min-height: 100vh;
