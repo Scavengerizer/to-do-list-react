@@ -1,7 +1,7 @@
 import React from "react";
 import Todo from "./Todo";
 
-function ToDo({ input, setInput, todos, setTodos }) {
+function ToDo({ input, setInput, todos, setTodos, canvasID, setCanvasID }) {
   return (
     <div className='todo-container'>
       <ul className='todo-list'>
@@ -12,14 +12,10 @@ function ToDo({ input, setInput, todos, setTodos }) {
             todo={todo}
             todos={todos}
             setTodos={setTodos}
+            canvasID={canvasID}
+            setCanvasID={setCanvasID}
           />
         ))}
-        {/* <Todo
-          input={input}
-          todos={todos}
-          setTodos={setTodos}
-          setInput={setInput}
-        /> */}
       </ul>
     </div>
   );

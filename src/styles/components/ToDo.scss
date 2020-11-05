@@ -1,0 +1,79 @@
+.todo {
+  .todo-item {
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3,
+    button {
+      display: inline-block;
+    }
+    button {
+      background-color: $grey;
+      border: none;
+      padding: 0.75em;
+      margin: 0 0.5em;
+      transition-duration: 0.3s;
+      transition: all ease linear;
+      cursor: pointer;
+      .fa-check,
+      .fa-trash {
+        color: white;
+      }
+    }
+    .trash {
+      .fa-trash {
+        color: orange;
+      }
+    }
+
+    button:hover {
+      opacity: 0.8;
+      transition-duration: 0.3s;
+      transition: all ease linear;
+    }
+    h3 {
+      max-width: 30rem;
+      overflow: hidden;
+      font-size: 2rem;
+      font-family: $Josh;
+      color: #181818;
+    }
+  }
+  .canvas-element {
+    margin-top: 2em;
+    h5 {
+      text-align: center;
+      font-size: 1rem;
+      color: #181818;
+      font-weight: 300;
+      font-family: $Mont;
+    }
+    canvas {
+      border: 1px solid #181818;
+      margin: 1em 0;
+    }
+    button {
+      background-color: $grey;
+      border: none;
+      padding: 0.75em;
+      margin: 0 0.5em;
+      transition-duration: 0.3s;
+      transition: all ease linear;
+      cursor: pointer;
+      .fa-check {
+        color: green;
+      }
+    }
+    button:hover {
+      opacity: 0.8;
+      transition-duration: 0.3s;
+      transition: all ease linear;
+    }
+  }
+}
+.todo-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}

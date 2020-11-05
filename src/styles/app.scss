@@ -6,8 +6,11 @@
 
 // importing sass components
 
-@import "./components/ToDo.scss";
+@import "./components/To-do-app.scss";
+@import "./components/Todo.scss";
+@import "./components/Form.scss";
 
 body {
+  min-height: 100vh;
   background-color: $cream;
 }

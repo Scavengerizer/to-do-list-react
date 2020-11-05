@@ -1,0 +1,4 @@
+input date from user
+get current date
+const time = input date - current
+reminder after t time

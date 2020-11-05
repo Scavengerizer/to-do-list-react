@@ -7,6 +7,7 @@ import "./styles/app.scss";
 function App() {
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
+  const [canvasID, setCanvasID] = useState([]);
 
   return (
     <div className='App'>
@@ -17,6 +18,8 @@ function App() {
         setInput={setInput}
       />
       <ToDo
+        canvasID={canvasID}
+        setCanvasID={setCanvasID}
         input={input}
         todos={todos}
         setTodos={setTodos}

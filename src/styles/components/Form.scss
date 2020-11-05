@@ -1,0 +1,48 @@
+.form-page {
+  margin-bottom: 6em;
+  .heading-text {
+    margin-top: 3em;
+    h1 {
+      font-size: 7rem;
+      font-family: $Mont;
+      color: #181818;
+    }
+  }
+  .task-add-form {
+    max-height: 20vh;
+    min-width: 100vw;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 7em;
+    input {
+      padding: 1em;
+      width: 30rem;
+      padding: 12px;
+      border: 2px solid #181818;
+      border-radius: 5px;
+      box-sizing: border-box;
+      resize: vertical;
+      color: grey;
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $grey;
+      border: none;
+      padding: 1em;
+      margin: 0 2em;
+      transition-duration: 0.3s;
+      transition: all ease linear;
+      cursor: pointer;
+      .fa-plus {
+        color: white;
+      }
+    }
+    button:hover {
+      opacity: 0.8;
+      transition-duration: 0.3s;
+      transition: all ease linear;
+    }
+  }
+}
